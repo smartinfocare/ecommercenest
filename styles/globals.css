@@ -1,0 +1,148 @@
+
+
+/* navbar section */
+/* Details section */
+.car-details-section{
+  background: #131925;
+  color: #fff;
+  text-align: left;
+  
+  height: 600px;
+  }
+  .car-details-section h3{
+      color: rgb(255, 153, 0);
+  }
+  img.bd-placeholder-img.bd-placeholder-img-lg.featurette-image.img-fluid.mx-auto {
+    margin-top: 35px; 
+      border: 1px solid;}
+  button.my-btn.btn {
+      background: #ff8d00;
+      padding: 12px 57px;
+      border-radius: 40px;
+      color: #fff;
+      font-size: large;
+      font-weight: bolder;
+  }
+  h1 {
+      font-size: 2.5rem;
+      margin-top: 60px;
+  }
+/* Offer section */
+h1.text-center.mt-5 {
+  color: #615260;
+  font-family: system-ui;
+}
+/* Product section */
+img{width:100%;}
+.view-btn{
+  cursor: pointer;
+}
+.card:hover { 
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+      box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);}
+.card-block {padding:15px;}
+.card-img {border-radius: 0px 0px 0 0;max-height:180px;overflow: hidden;}
+
+
+
+.item-zoom img {
+    vertical-align: top;
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.item-zoom:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.card{
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Slider section */
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+.carousel-item {
+  height: 800px;
+}
+/* Video section */
+img.img-fluid.my-img {
+  border: 1px solid #fff;
+  margin-top: -130px;
+  height: 320px;
+  border-radius: 9px;
+}
+/* Gallery section */
+.gallary-img {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    margin-bottom:20px;
+}
+
+.gallary-img:hover {
+  filter: none; /* IE6-9 */
+  -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+ 
+}
+h1.text-center {
+  margin-top: -1px;
+}
+/* Footer section */
+.context-dark, .bg-gray-dark, .bg-primary {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+  color: #ffffff;
+}
+.nav-list li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+  margin-left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 23px;
+  font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list li a:before {
+  content: "\f14f";
+  font: 400 21px/1 "Material Design Icons";
+  color: #4d6de6;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: -28px;
+  margin-right: 7px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .22s ease;
+}
