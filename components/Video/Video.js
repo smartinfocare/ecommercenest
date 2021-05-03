@@ -2,7 +2,6 @@
 export default function Video(){
     return(
         <>
-
         <div className="container ">
 
         <div className="row">

@@ -19,7 +19,7 @@ export default function Home(props) {
       </Head>
 
       <main>
-      <LandingPage data={props.data}/>
+      <LandingPage data={props.finalData}/>
       </main>
 
       <footer className={styles.footer}>
@@ -39,8 +39,7 @@ export default function Home(props) {
 }
 
 export const getStaticProps = async () => {
-  debugger
-  
+
   const res = await fetch('https://api.bigcommerce.com/stores/xcevhqdz/v3/catalog/products', {
     method: 'get',
     headers: { 
@@ -52,13 +51,33 @@ export const getStaticProps = async () => {
     }
   })
   const data = await res.json()
-console.log(data.data+"jwbwiwhihdiwhdwihdwidhiwhdwidhiwhdiwhdiwhdiwhidwdwi")
-  
-  //const data = await axios(config)
+  let myData = data.data;
+  var finalData = []
+for (let i = 0; i < myData.length; i++) {
+  const element = myData[i];
+  const id = myData[i].id;
+  var dataImg = null;
+  const resImg = await fetch(`https://api.bigcommerce.com/stores/xcevhqdz/v2/products/${id}/images`, {
+    method: 'get',
+    headers: { 
+      'X-Auth-Token': 'q3jt8f7mc249hr0a7dakrp6eiv5bztv', 
+      'X-Auth-Client':'sig2x6d2vjsyw8w1gj63rprgn8ye51k',
+      'Accept': 'application/json',
+      'Access-Control-Allow-Origin': 'http://localhost:3000',
+      "Access-Control-Allow-Headers": "x-requested-with, x-requested-by" 
+    }
+  })
+
+ dataImg = await resImg.json();
+ console.log("yash"+dataImg)
+  let images = dataImg;
+  element.images = images;
+  finalData.push(element)
+}
   
   return {
     props:{
-      data
+      finalData
     }
   }
 }
